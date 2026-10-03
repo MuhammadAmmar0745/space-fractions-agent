@@ -1,0 +1,6 @@
+# Code Agent ke apne dependencies
+# Gemini (free tier - recommended):
+google-genai>=1.0.0
+
+# Anthropic Claude (optional - agar aap Claude use karna chahen):
+# anthropic>=0.40.0

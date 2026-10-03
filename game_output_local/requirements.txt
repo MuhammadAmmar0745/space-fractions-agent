@@ -1,0 +1,8 @@
+# Space Fractions - Local Desktop Edition
+# No external dependencies are required to RUN the app.
+# Tkinter ships with standard Python on Windows and macOS.
+# On Linux, if `import tkinter` fails, install it with your package
+# manager, e.g.:  sudo apt-get install python3-tk
+
+# Only needed for running the automated tests:
+pytest>=8.0

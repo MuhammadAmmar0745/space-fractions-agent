@@ -1,0 +1,25 @@
+# API keys - INHE KABHI GitHub PAR MAT BHEJNA
+.env
+.env.local
+*.key
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Agent ka generated output (chahen to comment out kar dein agar
+# aap generated game bhi repo mein rakhna chahte hain - task ke liye
+# rakhna behtar hai, to ye line comment out hi rehne dein)
+# game_output/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+.DS_Store

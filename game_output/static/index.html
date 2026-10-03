@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Space Fractions &mdash; Save the Galaxy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<main class="stage">
+
+  <!-- ===== INTRO / MENU SCREEN ===== -->
+  <section id="screen-menu" class="screen screen--active">
+    <div class="panel panel--hero">
+      <p class="callsign">Fleet Training Simulator</p>
+      <h1 class="title">Space Fractions</h1>
+      <p class="tagline">Your ship's navigation core runs on fractions. Solve each transmission correctly to jump to the next sector &mdash; get the crew home.</p>
+      <button class="btn btn--primary" id="btn-start">Start Mission</button>
+      <p class="hint">10 transmissions &middot; freshly randomized each mission &middot; multiple choice</p>
+    </div>
+  </section>
+
+  <!-- ===== QUESTION SCREEN ===== -->
+  <section id="screen-question" class="screen">
+    <div class="hud">
+      <div class="hud-row">
+        <span class="hud-label">Sector</span>
+        <span class="hud-value" id="hud-sector">1 / 10</span>
+      </div>
+      <div class="progress-track" aria-hidden="true">
+        <div class="progress-fill" id="progress-fill"></div>
+        <div class="progress-ship" id="progress-ship">&#128640;</div>
+      </div>
+      <div class="hud-row">
+        <span class="hud-label">Score</span>
+        <span class="hud-value" id="hud-score">0</span>
+      </div>
+    </div>
+
+    <div class="panel panel--transmission">
+      <p class="transmission-tag">Incoming Transmission</p>
+      <p class="question-prompt" id="question-prompt">Loading...</p>
+
+      <div class="options" id="options-container" role="group" aria-label="Answer options"></div>
+
+      <div class="feedback" id="feedback" hidden>
+        <p class="feedback-headline" id="feedback-headline"></p>
+        <p class="feedback-explanation" id="feedback-explanation"></p>
+        <button class="btn btn--secondary" id="btn-next">Next Transmission</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== END SCREEN ===== -->
+  <section id="screen-end" class="screen">
+    <div class="panel panel--hero">
+      <p class="callsign" id="end-rank-label">Mission Report</p>
+      <h1 class="title" id="end-rank-title">Cadet</h1>
+      <p class="tagline" id="end-summary">You solved 0 of 10 transmissions.</p>
+
+      <div class="score-ring-wrap">
+        <div class="score-ring" id="score-ring">
+          <span id="score-ring-text">0/8</span>
+        </div>
+      </div>
+
+      <button class="btn btn--primary" id="btn-restart">Fly Again</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="static/js/game.js"></script>
+</body>
+</html>
